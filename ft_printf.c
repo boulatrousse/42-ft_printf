@@ -6,7 +6,7 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:06:35 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/21 10:27:56 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/21 12:56:46 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,22 @@ static int ft_check_percent(const char *str)
         return (1);
 }
 
-static void    ft_printf_bis(const char *str, args)
+static void ft_sort_arg(const char *str, va_list args, size_t i)
+{
+    if (str[i + 1] == 'c')
+        ft_putchar_fd(va_arg(args, int), 1);
+    else if (str[i + 1] == 's')
+        ft_putstr_fd(va_arg(args, (char *)), 1);
+    else if (str[i + 1] == 'p')
+        ft_pointer_hex(va_arg(args, (void *)));
+    else if (str[i + 1] == 'd')
+        ft_putnbr_fd(va_arg(args, int), 1);
+    else if (str[i + 1] == 'i')
+        
+        
+}
+
+static void ft_printf_bis(const char *str, args)
 {
     size_t  i;
 
@@ -41,7 +56,7 @@ static void    ft_printf_bis(const char *str, args)
     while (str[i])
     {
         if (str[i] == '%')
-            ft_sort_arg(str, args);
+            ft_sort_arg(str, args, i);
         i++;
     }
     
@@ -57,8 +72,7 @@ int ft_printf(const char *str, ...)
         ft_putstr_fd((char *)str, 1);
         return ((int)ft_strlen(str)); 
     }
-    else
-        ft_printf_bis(str, args);
+    ft_printf_bis(str, args);
     return ((int)ft_strlen(str));
 }
 
