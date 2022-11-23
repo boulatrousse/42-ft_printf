@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libprintf.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd_usign.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 14:53:52 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 11:34:21 by lboulatr         ###   ########lyon.fr   */
+/*   Created: 2022/11/23 11:06:03 by lboulatr          #+#    #+#             */
+/*   Updated: 2022/11/23 11:32:58 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPRINTF_H
-# define LIBPRINTF_H
+#include "libprintf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft/libft.h"
-
-void	ft_putnbr_base_hexa(long long int nbr, int check, char *base);
-void	ft_putnbr_fd_usign(unsigned int n, int fd);
-
-#endif
+void	ft_putnbr_fd_usign(unsigned int n, int fd)
+{
+	if (n == 4294967295)
+		write(fd, "4294967295", 10);
+	else
+	{
+		if (n >= 0 && n <= 9)
+			ft_putchar_fd(n + 48, fd);
+		else if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			ft_putnbr_fd_usign(n * (-1), fd);
+		}
+		else
+		{
+			ft_putnbr_fd_usign((n / 10), fd);
+			ft_putnbr_fd_usign((n % 10), fd);
+		}
+	}
+}
