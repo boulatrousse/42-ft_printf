@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_hexa.c                              :+:      :+:    :+:   */
+/*   ft_pnbr_bhexa.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:24:22 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:20:20 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:38:04 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
+#include "libftprintf.h"
 
 static int	ft_putnbr_base_hexa_bis(long long int nbr, char *base, int *x)
 {

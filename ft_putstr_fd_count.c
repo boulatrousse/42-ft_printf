@@ -6,11 +6,11 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:52:11 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:14:19 by lboulatr         ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 15:37:49 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libprintf.h"
+#include "libftprintf.h"
 
 int	ft_putstr_fd_count(char *s, int fd)
 {

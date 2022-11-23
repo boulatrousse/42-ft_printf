@@ -6,14 +6,13 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 14:53:52 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:19:42 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:31:07 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBPRINTF_H
 # define LIBPRINTF_H
 
-# include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
 # include "libft/libft.h"
