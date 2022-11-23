@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd_usign.c                               :+:      :+:    :+:   */
+/*   ft_putnbr_fd_count.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 11:06:03 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 13:40:13 by lboulatr         ###   ########.fr       */
+/*   Created: 2022/11/23 13:47:16 by lboulatr          #+#    #+#             */
+/*   Updated: 2022/11/23 13:54:18 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-static void	ft_putnbr_fd_usign_bis(unsigned int n, int fd)
+static void ft_putnbr_fd_count_bis(int n, int fd)
 {
-	if (n == 4294967295)
-		write(fd, "4294967295", 10);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
 	else
 	{
 		if (n >= 0 && n <= 9)
@@ -23,18 +23,18 @@ static void	ft_putnbr_fd_usign_bis(unsigned int n, int fd)
 		else if (n < 0)
 		{
 			ft_putchar_fd('-', fd);
-			ft_putnbr_fd_usign(n * (-1), fd);
+			ft_putnbr_fd(n * (-1), fd);
 		}
 		else
 		{
-			ft_putnbr_fd_usign((n / 10), fd);
-			ft_putnbr_fd_usign((n % 10), fd);
+			ft_putnbr_fd((n / 10), fd);
+			ft_putnbr_fd((n % 10), fd);
 		}
 	}
 }
 
-int ft_putnbr_fd_usign(unsigned int n, int fd)
+int ft_putnbr_fd_count(int n, int fd)
 {
-	ft_putnbr_fd_usign_bis(n, fd);
-	return ((long long int)count(n));
+    ft_putnbr_fd_count_bis(n, fd);
+    return (count(n));
 }
