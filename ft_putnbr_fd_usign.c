@@ -6,7 +6,7 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:06:03 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 13:40:13 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:15:01 by lboulatr         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	ft_putnbr_fd_usign_bis(unsigned int n, int fd)
 	}
 }
 
-int ft_putnbr_fd_usign(unsigned int n, int fd)
+int	ft_putnbr_fd_usign(unsigned int n, int fd)
 {
 	ft_putnbr_fd_usign_bis(n, fd);
 	return ((long long int)count(n));

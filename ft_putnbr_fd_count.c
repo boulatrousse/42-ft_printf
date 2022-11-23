@@ -6,13 +6,13 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:47:16 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 13:54:18 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:14:42 by lboulatr         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libprintf.h"
 
-static void ft_putnbr_fd_count_bis(int n, int fd)
+static void	ft_putnbr_fd_count_bis(int n, int fd)
 {
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);
@@ -33,8 +33,8 @@ static void ft_putnbr_fd_count_bis(int n, int fd)
 	}
 }
 
-int ft_putnbr_fd_count(int n, int fd)
+int	ft_putnbr_fd_count(int n, int fd)
 {
-    ft_putnbr_fd_count_bis(n, fd);
-    return (count(n));
+	ft_putnbr_fd_count_bis(n, fd);
+	return (count(n));
 }

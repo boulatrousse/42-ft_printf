@@ -6,7 +6,7 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:51:33 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 13:51:55 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:11:49 by lboulatr         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_putchar_fd_count(char c, int fd)
 {
 	write(fd, &c, 1);
-    return (1);
+	return (1);
 }
