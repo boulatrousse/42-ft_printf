@@ -6,12 +6,12 @@
 #    By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 15:54:04 by lboulatr          #+#    #+#              #
-#    Updated: 2022/11/23 16:13:28 by lboulatr         ###   ########.fr        #
+#    Updated: 2022/11/24 14:58:34 by lboulatr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_printf.c count.c ft_pnbr_bhexa.c ft_putchar_fd_count.c ft_putnbr_fd_count.c ft_putnbr_fd_usign.c \
-		ft_putstr_fd_count.c
+SRCS = ft_printf.c count.c ft_hexa.c ft_putchar_fd_count.c ft_putnbr_fd_count.c ft_putnbr_fd_usign.c \
+		ft_putstr_fd_count.c ft_hexaptr.c
 	
 OBJS = ${SRCS:.c=.o}
 
@@ -19,7 +19,7 @@ CC = cc
 
 FLAGS = -Wall -Werror -Werror
 
-HEADERS = libftprintf.h 
+HEADERS = ft_printf.h 
 
 NAME = libftprintf.a
 
@@ -28,7 +28,7 @@ LIB = ar rc
 RM = rm -f
 
 %.o:	%.c ${HEADERS} Makefile
-	${CC} ${FLAGS} -I${HEADERS} -c %.c -o %.o  
+	${CC} ${FLAGS} -I${HEADERS} -c $< -o $@  
 	
 all:	${NAME} Makefile libft
 
@@ -40,10 +40,12 @@ ${NAME}:	libft ${OBJS} Makefile
 	${LIB} ${NAME} ${OBJS}
 
 clean:	
-	${RM} ${OBJS} libft/libft.a libft/*.o 
+	${RM} ${OBJS}
+	make clean -C libft
 
 fclean:	clean
 	${RM} ${NAME}
+	make clean -C libft
 
 re:		fclean all
 

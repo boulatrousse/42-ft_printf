@@ -6,11 +6,11 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:06:03 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:37:53 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:57:56 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	ft_putnbr_fd_usign_bis(unsigned int n, int fd)
 {

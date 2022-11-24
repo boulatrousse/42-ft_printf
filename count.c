@@ -6,11 +6,11 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:52:37 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:38:06 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:57:24 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	count(long long int n)
 {

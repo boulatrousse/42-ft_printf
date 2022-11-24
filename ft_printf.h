@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libprintf.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 14:53:52 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:31:07 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/24 14:58:38 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPRINTF_H
-# define LIBPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <stdarg.h>
 # include "libft/libft.h"
 
 int		ft_printf(const char *str, ...);
-int		ft_pnbr_bhexa(long long int nbr, int check, char *base, int *x);
+int		ft_hexa(unsigned int nbr, int check, char *base, int *x);
+int		ft_hexaptr(unsigned long long nbr, int c, char *b, int *x);
 int		ft_putnbr_fd_usign(unsigned int n, int fd);
 int		ft_putchar_fd_count(char c, int fd);
 int		count(long long int n);

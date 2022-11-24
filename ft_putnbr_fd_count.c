@@ -6,11 +6,11 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:47:16 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/23 15:37:56 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:57:52 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	ft_putnbr_fd_count_bis(int n, int fd)
 {
