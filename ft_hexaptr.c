@@ -6,13 +6,13 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 14:38:00 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/24 14:58:07 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:32:43 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base_hexa_ptr(unsigned long long nbr, char *base, int *x)
+static int	ft_putnbr_base_hexa_ptr(unsigned long long nbr, char *base, int *x)
 {
 	if (nbr >= 0 && nbr < 16)
 	{

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pnbr_bhexa.c                                    :+:      :+:    :+:   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:24:22 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/24 14:53:05 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:32:37 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base_hexa(unsigned int nbr, char *base, int *x)
+static int	ft_putnbr_base_hexa(unsigned int nbr, char *base, int *x)
 {
 	if (nbr >= 0 && nbr < 16)
 	{
