@@ -6,7 +6,7 @@
 #    By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/23 15:54:04 by lboulatr          #+#    #+#              #
-#    Updated: 2022/11/24 14:58:34 by lboulatr         ###   ########.fr        #
+#    Updated: 2022/11/25 16:19:25 by lboulatr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ clean:
 
 fclean:	clean
 	${RM} ${NAME}
-	make clean -C libft
+	make fclean -C libft
 
 re:		fclean all
 
