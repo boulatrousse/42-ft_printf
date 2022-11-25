@@ -6,7 +6,7 @@
 /*   By: lboulatr <lboulatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:06:35 by lboulatr          #+#    #+#             */
-/*   Updated: 2022/11/24 14:57:45 by lboulatr         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:13:58 by lboulatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,15 @@ int	ft_printf(const char *str, ...)
 		return (-1);
 	while (str[i])
 	{
-		if (str[i] == '%')
+		if (str[i] == '%' && str[i + 1])
 		{
 			x += ft_sort_args(str, args, i);
 			i += 2;
 		}
+		else if (str[i] == '%' && str[i + 1] == '\0')
+			return (x);
 		else
-		{
-			x += ft_putchar_fd_count(str[i], 1);
-			i++;
-		}
+			x += ft_putchar_fd_count(str[i++], 1);
 	}
-	va_end(args);
-	return (x);
+	return (va_end(args), x);
 }
